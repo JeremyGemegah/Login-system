@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login page</title>
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+
+<section>
+	<div class="mainb"> <!-- main box with border-->
+
+		<!-- heading-->
+		<div class="lhead">
+		<h2>Login</h2>
+	</div>
+
+		<!--error message-->
+
+
+		<!--form-->
+		<form name="Regform" >
+
+			<!-- error message -->
+
+			<div class="message1" id="mess" style="display: none;" >
+				<p id="par1">d</p>
+				<p id="par2"></p>
+				
+			</div>
+
+
+
+
+
+			<div class="input">
+			<label>Email</label>
+			<input class="inputEl" type="email" name="email" id="email">
+
+			<span id="in-err" style="font-size: 12px; color: #aa0000ff;  display: none;">Invalid email</span>
+
+			</div>
+
+			<div class="input">
+
+				<div style="width: 100;"><label>Password</label><span style="float:right; font-size: 13px; color:  #0055b4ff; cursor: pointer;" onclick="pass_show()">show password</span></div>
+
+
+			<input class="inputEl" type="password" name="password" id="pass_field">
+			<span id="in-errp" style="font-size: 12px; color: #aa0000ff; display: none; ">Password must be more than 8 characters</span>
+			</div>
+
+			<div class="input">
+			<button class="login-button" id="button">Login</button>
+			</div>
+		</form >
+
+		<!-- password reset-->
+		<span class="password-reset" style="float:right; font-size: 14px; padding-top: 5px; color:  #0055b4ff; cursor: pointer;" onclick='location.href="f_password.html";'>Forgot password?</span>
+	</div>
+
+	</section>
+
+	<script src="script.js"> </script> 
+
+	<script type="text/javascript">
+		
+		var request = process_link();
+
+		 if (request) {
+		 	var verr = verify(request["email"],request["password"]);
+
+		 	if (verr == true) {
+
+		 		// redirect
+		 		document.getElementById("button").innerHTML="Logging in...";
+
+		 		setTimeout(relocate(),10000);
+
+		 	
+
+		 	}else{
+		 		var p1="Enter valid credentials";
+		 		var p2="password or email might be wrong";
+
+		 		document.getElementById("par1").innerHTML=p1;
+		 		document.getElementById("par2").innerHTML=p2;
+		 		document.getElementById("mess").style.display="block";
+
+
+		 	}
+		 }else{
+		 		document.getElementById("mess").style.display="none";
+
+		 }
+	</script>
+	
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+input{
+	display: block;
+}
+
+
+section{
+display: flex;
+height: 100vh;
+width: 100vw;
+align-items: center;
+justify-content: center;
+
+}
+
+.mainb{
+	
+	border: 1px solid black ;
+	padding: 50px;
+
+	
+	
+}
+
+.input{
+	margin-top: 25px; 
+}
+
+.inputEl{
+	height: 35px;
+	min-width: 250px;
+	border-radius: 0px;
+	border: 1px solid grey;
+	background: #e6e6e6ff;
+}
+
+button{
+	height: 35px;
+	min-width: 250px;
+	
+	border:none;
+	background: #0055b4ff;
+	color:white;
+
+}
+
+.lhead{
+	text-align: center;
+}
+
+
+
+div.display-2{
+	display: none;
+	visibility: none;
+}
+
+#disp2{
+	display: none;
+}
+
+
+
+#mess{
+	display: none;
+	margin-top: 25px;
+padding: 8px;
+font-size: 12px;
+font-weight: bold;
+
+}
+
+.message1{
+	color: #aa0000ff;
+	background: #e9b7aff7;
+}
+
+.message2{
+	background: #c8ffabf7;
+	color: #39b141ff;
+}
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+    display: none;
+}
+
+#in-errp,#in-err{
+	padding-top: 3px;
+}
+
+#in-errm{
+	display: none;
+	padding-top: 3px;
+}
